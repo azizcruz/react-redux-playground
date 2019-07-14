@@ -12,13 +12,13 @@ const reducer = (state = initState, action) => {
         num: newState.num + 1
       };
     case "decreaseNum":
-      newState.num -= 1;
-      break;
+      return {
+        newState,
+        num: newState.num - 1
+      };
     default:
       return newState;
   }
-
-  return newState;
 };
 
 export default reducer;
